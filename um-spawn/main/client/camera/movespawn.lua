@@ -83,6 +83,9 @@ function MoveToPlayerFromSky()
     SetCamRot(skyCam, um.main.camera.skyspawnPos or -20, 0.0, 0.0, 2)
     SetCamActive(skyCam, true)
     RenderScriptCams(true, false, 0, true, true)
+    -- Screen was kept dark until now; fade in while the camera is already pointing
+    -- at the sky so the player is never seen at ground level before the animation.
+    DoScreenFadeIn(1000)
 
     -- Animate the camera descending from the sky using a cubic ease-out over 2 seconds.
     -- The function intentionally starts from a very high altitude so the player appears
