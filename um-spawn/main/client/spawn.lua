@@ -3,6 +3,9 @@ local function setPlayerPosition(coords)
     SetEntityCoordsNoOffset(ped, coords.x, coords.y, coords.z)
     SetEntityHeading(ped, coords.w or coords.a or coords.h or GetEntityHeading(cache.ped))
     FreezeEntityPosition(ped, false)
+    -- The spawn menu hides the ped; always make it visible when placing at spawn,
+    -- regardless of which camera was active or whether it was already destroyed.
+    SetEntityVisible(ped, true)
 end
 
 local function destroyCamera()
@@ -51,9 +54,10 @@ end)
 function ForceDeadPedLastLocation()
     if not um.main.forceDeadPedLastLocation then return false end
 
-    local checkDead = ESX.GetPlayerData()?.dead
+    local playerData = ESX.GetPlayerData()
+    if not playerData then return false end
 
-    if checkDead then
+    if playerData.dead then
         setPlayerPosition(GetLastLocation())
         return true
     end
