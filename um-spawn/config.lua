@@ -99,32 +99,32 @@ um.coords = {
     ['legion_garage'] = {
     coords = vector4(211.4431, -812.5846, 30.7645, 0.0),
     street = 'Legion Main Garage',
-    text = 'Spawn at the main garage'
+    text = 'Main Garage'
 },
 ['suburban'] = {
     coords = vector4(408.1850, -1016.9625, 29.3727, 0.0),
     street = 'Suburban',
-    text = 'Spawn at Suburban'
+    text = 'Suburban'
 },
 ['pier'] = {
     coords = vector4(-1445.0836, -776.8078, 23.5680, 0.0),
     street = 'Pier',
-    text = 'Spawn at the Pier'
+    text = 'The Pier'
 },
 ['police_garage'] = {
     coords = vector4(408.1850, -1016.9625, 29.3727, 0.0),
     street = 'Police Garage',
-    text = 'Spawn at the police garage'
+    text = 'Police Garage'
 },
 ['thot_thots'] = {
     coords = vector4(245.6205, -1471.6584, 29.2528, 0.0),
     street = 'Thot Thots',
-    text = 'Spawn at Thot Thots'
+    text = 'Thot Thots'
 },
 ['ems_garage'] = {
     coords = vector4(68.8778, -433.9857, 39.2469, 0.0),
     street = 'EMS Garage',
-    text = 'Spawn at the EMS garage'
+    text = 'EMS Garage'
 },
 
 }

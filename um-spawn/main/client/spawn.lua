@@ -38,9 +38,12 @@ RegisterNUICallback('spawn', function(data, cb)
     setPlace(data)
     Wait(2000)
     Debug('Location: ' .. data.place .. ' Spawned')
-    DoScreenFadeIn(1000)
     um.hud(false)
-    if data.place ~= 'properties' then MoveToPlayerFromSky() end
+    if data.place ~= 'properties' then
+        MoveToPlayerFromSky() -- handles its own fade-in after sky camera is active
+    else
+        DoScreenFadeIn(1000)
+    end
     UMPromiseGlobal:resolve(nil)
     cb(1 or 'ok')
 end)
